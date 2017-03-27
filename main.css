@@ -1,0 +1,12 @@
+#navbar {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-top: 10px;
+}
+.well {
+  height: 500px;
+}
+.noShow {
+  display: none;
+}
