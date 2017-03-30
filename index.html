@@ -1,134 +1,98 @@
 <html>
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Font awesome Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Font awesome Icons -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body id="main">
 
     <div class="container">
 
       <!--===== SITE HEADER =====-->
       <div class="row header">
-        <h1 class="text-center text-primary">#Words<i class="fa fa-pencil text-danger"></i>#Countries<i class="fa fa-globe text-danger"></i>#Planets</h1>
+        <h1 class="text-center text-primary">#Space<i class="fa fa-space-shuttle text-danger"></i>#Countries<i class="fa fa-globe text-danger"></i>#Weather</h1>
       </div>
+
       <!--===== NAVIGATION BAR =====-->
         <nav class="navbar bg-primary" id="navbar">
 
-          <ul class="col-md-12 text-center list-unstyled">
+          <ul class="menu col-md-12 text-center list-unstyled">
 
             <div class="col-md-4">
-              <li><a href="#" class="btn btn-info" id="word-btn">Find me a word</a></li>
+              <li><a href="#" class="btn btn-info" id="space-menu-btn">Space Information</a></li>
+
             </div>
-
             <div class="col-md-4">
-              <li><a href="#" class="btn btn-info" id="country-btn">Find me a country</a></li>
+              <li><a href="#" class="btn btn-info" id="country-menu-btn">Find me a country</a></li>
+
             </div>
-
             <div class="col-md-4">
-              <li><a href="#" class="btn btn-info" id="planet-btn">Find me a planet</a></li>
+              <li><a href="#" class="btn btn-info" id="weather-menu-btn">Tell me the weather</a></li>
             </div>
 
           </ul>
         </nav>
 
-      <!-- ===== Form For Word ===== -->
-      <div class="row word-form">
-      <form action="text" class="form-horizontal col-lg-8">
+      <!-- ===== Form For Space ===== -->
+      <div class="row space-form">
 
-        <div class="form-group col-lg-10">
-          <label for="wordInput" class="control-label">Input for word:</label>
+        <div class="form-group col-md-6">
+          <label for="spaceInput" class="control-label">Get Astronomy picture of the Day:</label>
+          <input type="text" class="form-control" id="spaceInput1" placeholder="Year">
+          <input type="text" class="form-control" id="spaceInput2" placeholder="Month">
+          <input type="text" class="form-control" id="spaceInput3" placeholder="Day">
 
-          <input type="text" class="form-control" id="wordInput" placeholder="Word">
-
+          <button class="btn btn-success" id="addSpaceInfo">Lets go!</button>
         </div>
-
-        <div class="form-group">
-        <div class="checkbox col-lg-6">
-            <label>
-              <input type="checkbox">Description
-            </label>
-            <label>
-              <input type="checkbox">PartofSpeech
-            </label>
-            <label>
-              <input type="checkbox">Example
-            </label>
-      </div>
-    </div>
-  <button type="submit" class="btn btn-success">Lets Go!</button>
-    </form>
 </div>
 
   <!-- ===== Form for Countrys ===== -->
+  <div row="row col-lg-10">
+  <div class="country-form noShow">
 
-  <div class="row country-form noShow">
-  <form action="text" class="form-horizontal col-lg-8">
-
-    <div class="form-group col-lg-10">
-      <label for="wordInput" class="control-label">Input for country:</label>
-
-      <input type="text" class="form-control" id="countryInput" placeholder="Word">
-
-    </div>
-
+    <label for="countryInput" class="control-label">Input for country:</label>
     <div class="form-group">
     <div class="checkbox col-lg-6">
+
         <label>
-          <input type="checkbox">Country
+          <input type="checkbox" id="capitalCheck">Capital
         </label>
         <label>
-          <input type="checkbox">Population
+          <input type="checkbox" id="populationCheck">Population
         </label>
         <label>
-          <input type="checkbox">Continent
+          <input type="checkbox" id="continentCheck">Continent
         </label>
   </div>
 </div>
-<button type="submit" class="btn btn-success">Lets Go!</button>
-</form>
+
+<input type="text" class="form-control" id="countryInput" placeholder="Country">
+<button class="btn btn-success" id="addCountry">Lets Go!</button>
 </div>
+</div>
+<!-- ===== Form for Weather ===== -->
 
-<!-- ===== Form for Planets ===== -->
-
-<div class="row planet-form noShow">
-<form action="text" class="form-horizontal col-lg-8">
-
+<div class="row weather-form noShow">
   <div class="form-group col-lg-10">
-    <label for="wordInput" class="control-label">Input for planet:</label>
+    <label for="wordInput" class="control-label">Input for weather:</label>
+    <input type="text" class="form-control" id="weatherInput" placeholder="Enter City Name">
 
-    <input type="text" class="form-control" id="planetInput" placeholder="Word">
-
+  <button class="btn btn-success" id="weather-btn">Lets Go!</button>
   </div>
 
-  <div class="form-group">
-  <div class="checkbox col-lg-6">
-      <label>
-        <input type="checkbox">Planet
-      </label>
-      <label>
-        <input type="checkbox">Size
-      </label>
-      <label>
-        <input type="checkbox">Solar System
-      </label>
 </div>
-</div>
-<button type="submit" class="btn btn-success">Lets Go!</button>
-</form>
-</div>
-    <div class="well"></div>
+    <div class="well" id="content-container">
+    </div>
   </div>
 
 
